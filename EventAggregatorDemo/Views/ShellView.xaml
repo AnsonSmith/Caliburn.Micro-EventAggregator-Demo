@@ -1,0 +1,38 @@
+﻿<Window x:Class="EventAggregatorDemo.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="600" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <TextBlock Text="Message:" Margin="5"/>
+            <TextBox x:Name="CurrentMessage" Width="200" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <TextBlock Text="Send to:" Margin="5"/>
+            <Button x:Name="MessageNumberOne" Content="#1" Width="50" Margin="5"/>
+            <Button x:Name="MessageNumberTwo" Content="#2" Width="50" Margin="5"/>
+            <Button x:Name="MessageNumberThree" Content="#3" Width="50" Margin="5"/>
+            <Button x:Name="MessageNumberFour" Content="#4" Width="50" Margin="5"/>
+            <Button x:Name="MessageEvens" Content="Evens" Width="50" Margin="5"/>
+            <Button x:Name="MessageOdds" Content="Odds" Width="50" Margin="5"/>
+        </StackPanel>
+
+        <ContentControl Grid.Row="2" Grid.Column="0" x:Name="NumberOne"/>
+        <ContentControl Grid.Row="2" Grid.Column="1" x:Name="NumberTwo"/>
+        <ContentControl Grid.Row="3" Grid.Column="0" x:Name="NumberThree"/>
+        <ContentControl Grid.Row="3" Grid.Column="1" x:Name="NumberFour"/>
+
+    </Grid>
+</Window>
